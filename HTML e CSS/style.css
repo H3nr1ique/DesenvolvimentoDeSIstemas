@@ -1,10 +1,15 @@
-h1 {
+.titulo {
     text-align: center;
     background-color: black;
     color: white;
     border-radius:30px;
 }
 
-h2 {
+.sub_titulo {
     text-align: center;
+}
+.imagem {
+    width: 300px;
+    height: 200px;
+    border: solid ;
 }
