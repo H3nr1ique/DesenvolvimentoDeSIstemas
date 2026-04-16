@@ -5,7 +5,9 @@ programa {
 
     //Exibir e escrever notas
 
+    escreva("==============================")
     escreva("\nPrograma para calcular a média\n")
+    escreva("==============================\n")
 
     escreva("\nInforme o seu nome: ")
     leia(nome)
