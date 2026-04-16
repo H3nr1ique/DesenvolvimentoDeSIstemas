@@ -2,6 +2,10 @@ programa {
   funcao inicio() {
     real nota1, nota2, nota3, media
 
+    //Exibir e escrever notas
+
+    escreva("\nPrograma para calcular a média\n")
+    
     escreva("Digite a primeira nota: ")
     leia(nota1)
 
@@ -11,8 +15,12 @@ programa {
     escreva("Digite a terceira nota: ")
     leia(nota3)
 
-    media = (nota1 + nota2 + nota3) / 3
+    //Calcular media
 
-    escreva("\nA Media das notas é: ", media)
+    media = (nota1 + nota2 + nota3) /3
+    
+    //Exibir o resultado
+
+    escreva("\nA média é: ", media)
   }
 }
