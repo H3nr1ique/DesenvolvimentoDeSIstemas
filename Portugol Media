@@ -1,6 +1,7 @@
 programa {
+  inclua biblioteca Matematica --> mat
   funcao inicio() {
-    real nota1, nota2, nota3, media
+    real nota1, nota2, nota3, media, numeroArredondado
     cadeia nome
 
     //Exibir e escrever notas
@@ -24,9 +25,10 @@ programa {
     //Calcular media
 
     media = (nota1 + nota2 + nota3) /3
+    numeroArredondado = mat.arredondar(media, 2)
     
     //Exibir o resultado
 
-    escreva("\nA média é: ", media)
+    escreva("\nA média é: ", numeroArredondado)
   }
 }
