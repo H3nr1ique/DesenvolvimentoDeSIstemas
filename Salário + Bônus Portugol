@@ -11,22 +11,24 @@ programa {
     escreva("Programa para calcular bônus salarial\n")
     escreva("=====================================\n")
 
-    escreva("Digite o nome do funcionário: \n")
+    escreva("\nDigite o nome do funcionário:\n")
     leia(nomeFuncionario)
 
-    escreva("Digite o salário fixo: \n")
+    escreva("\nDigite o salário fixo:\n")
     leia(salarioFixo)
 
-    escreva("Digite o valor das vendas no mês: \n")
+    escreva("\nDigite o valor das vendas no mês:\n")
     leia(vendasMes)
 
     bonus = vendasMes * 0.1
     salarioTotal = salarioFixo + bonus
     salarioFinal = mat.arredondar(salarioTotal, 2)
-
-    escreva("Nome do funcionário: " + nomeFuncionario + "\n")
-    escreva("Salário fixo: " + salarioFixo + "\n")
-    escreva("Bônus: " + bonus + "\n")
-    escreva("Salário Total: " + salarioTotal + "\n")
+    
+    escreva("\n=====================================")
+    escreva("\nNome do funcionário: " + nomeFuncionario + "\n")
+    escreva("\nSalário fixo: " + salarioFixo + "\n")
+    escreva("\nBônus: " + bonus + "\n")
+    escreva("\nSalário Total: " + salarioTotal + "\n")
+    escreva("=====================================")
   }
 }
