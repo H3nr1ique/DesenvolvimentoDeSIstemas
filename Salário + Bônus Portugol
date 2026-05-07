@@ -1,0 +1,32 @@
+programa {
+  inclua biblioteca Matematica --> mat
+  funcao inicio() {
+    
+    //Declaração de variáveis
+    cadeia nomeFuncionario
+    real salarioFixo, vendasMes, bonus, salarioTotal, salarioFinal
+
+    //Entrada de Dados
+    escreva("=====================================\n")
+    escreva("Programa para calcular bônus salarial\n")
+    escreva("=====================================\n")
+
+    escreva("Digite o nome do funcionário: \n")
+    leia(nomeFuncionario)
+
+    escreva("Digite o salário fixo: \n")
+    leia(salarioFixo)
+
+    escreva("Digite o valor das vendas no mês: \n")
+    leia(vendasMes)
+
+    bonus = vendasMes * 0.1
+    salarioTotal = salarioFixo + bonus
+    salarioFinal = mat.arredondar(salarioTotal, 2)
+
+    escreva("Nome do funcionário: " + nomeFuncionario + "\n")
+    escreva("Salário fixo: " + salarioFixo + "\n")
+    escreva("Bônus: " + bonus + "\n")
+    escreva("Salário Total: " + salarioTotal + "\n")
+  }
+}
