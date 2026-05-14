@@ -1,0 +1,19 @@
+programa
+{
+    funcao inicio()
+    {
+        real precoProduto
+        inteiro quantidade
+        real valorTotal
+        
+        escreva("Digite o preço do produto: R$ ")
+        leia(precoProduto)
+        
+        escreva("Digite a quantidade: ")
+        leia(quantidade)
+        
+        valorTotal = precoProduto * quantidade
+        
+        escreva("\nO valor total da compra é R$ ", valorTotal)
+    }
+}
