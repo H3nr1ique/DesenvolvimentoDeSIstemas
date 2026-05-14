@@ -1,0 +1,22 @@
+programa
+{
+    funcao inicio()
+    {
+        real precoOriginal
+        real percentualDesconto
+        real valorDesconto
+        real precoComDesconto
+
+        escreva("Escreva o Preço Original: ")
+        leia(precoOriginal)
+
+        percentualDesconto = 10.0
+        
+        valorDesconto = precoOriginal * (percentualDesconto / 100)
+        precoComDesconto = precoOriginal - valorDesconto
+        
+        escreva("Preço original: R$ ", precoOriginal, "\n")
+        escreva("Desconto (", percentualDesconto, "%): R$ ", valorDesconto, "\n")
+        escreva("Preço com desconto: R$ ", precoComDesconto)
+    }
+}
