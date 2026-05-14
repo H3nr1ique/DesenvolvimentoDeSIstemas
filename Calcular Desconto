@@ -7,7 +7,7 @@ programa
         escreva("Escreva o preço original: ")
         leia(precoOriginal)
 
-        percentualDesconto = 13.9
+        percentualDesconto = 10.0
         
         valorDesconto = precoOriginal * (percentualDesconto / 100)
         precoComDesconto = precoOriginal - valorDesconto
