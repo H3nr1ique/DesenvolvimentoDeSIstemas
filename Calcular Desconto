@@ -2,15 +2,12 @@ programa
 {
     funcao inicio()
     {
-        real precoOriginal
-        real percentualDesconto
-        real valorDesconto
-        real precoComDesconto
+        real precoOriginal, percentualDesconto, valorDesconto, precoComDesconto
 
         escreva("Escreva o preço original: ")
         leia(precoOriginal)
 
-        percentualDesconto = 10.0
+        percentualDesconto = 13.9
         
         valorDesconto = precoOriginal * (percentualDesconto / 100)
         precoComDesconto = precoOriginal - valorDesconto
