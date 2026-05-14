@@ -7,7 +7,7 @@ programa
         real valorDesconto
         real precoComDesconto
 
-        escreva("Escreva o Preço Original: ")
+        escreva("Escreva o preço original: ")
         leia(precoOriginal)
 
         percentualDesconto = 10.0
