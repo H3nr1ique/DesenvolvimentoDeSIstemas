@@ -7,17 +7,18 @@ programa {
     //Entrada de Dados
     escreva("==================================\n")
     escreva("PROGRAMA PARA VERIRICAÇÂO DE IDADE\n")
-    escreva("==================================")
+    escreva("==================================\n")
     escreva("\nDigite sua idade: ")
     leia(idade)
 
 
     //Estrututa Condicional
     se(idade >= 18) {
-      escreva("Maior de idade")
+      escreva("\nMaior de idade")
     }
     senao {
-      escreva("Menor de idade")
+      escreva("\nMenor de idade")
     }
   }
 }
+
