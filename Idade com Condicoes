@@ -14,11 +14,10 @@ programa {
 
     //Estrututa Condicional
     se(idade >= 18) {
-      escreva("\nMaior de idade")
+      escreva("\nMaior de idade\n")
     }
     senao {
-      escreva("\nMenor de idade")
+      escreva("\nMenor de idade\n")
     }
   }
 }
-
