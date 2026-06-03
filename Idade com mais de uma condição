@@ -1,0 +1,30 @@
+programa {
+  funcao inicio() {
+
+    //Dados
+    inteiro idade
+    cadeia nome 
+
+    //Entrada de Dados
+    escreva("========================================================\n")
+    escreva("PROGRAMA PARA VERIRICAÇÂO DE IDADE MAIOR, MENOR OU IGUAL\n")
+    escreva("=========================================================\n")
+
+    escreva("\nDigite seu nome: ")
+      leia(nome)
+
+    escreva("\nDigite sua idade: ")
+    leia(idade)
+
+    //Estrututa Condicional
+    se(idade > 18) {
+      escreva(nome + ", você tem mais de 18 anos\n")
+    }
+    senao se(idade < 18) {
+      escreva(nome + ", vocẽ tem menos de 18 anos\n")
+    }
+    senao {
+      escreva(nome + ", vocẽ tem exatamente 18 anos\n")
+    }
+  }
+}
