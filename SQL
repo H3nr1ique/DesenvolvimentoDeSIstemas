@@ -1,0 +1,105 @@
+-- ============================
+-- BANCO DE DADOS
+-- ============================
+CREATE DATABASE IF NOT EXISTS livraria;
+USE livraria;
+
+-- ============================
+-- TABELA DE CATEGORIAS
+-- ============================
+CREATE TABLE categorias (
+    id_categoria INT PRIMARY KEY AUTO_INCREMENT,
+    nome_categoria VARCHAR(50) NOT NULL UNIQUE
+);
+
+-- ============================
+-- TABELA DE EDITORAS
+-- ============================
+CREATE TABLE editoras (
+    id_editora INT PRIMARY KEY AUTO_INCREMENT,
+    nome_editora VARCHAR(100) NOT NULL UNIQUE,
+    telefone VARCHAR(20),
+    endereco VARCHAR(200)
+);
+
+-- ============================
+-- TABELA DE AUTORES
+-- ============================
+CREATE TABLE autores (
+    id_autor INT PRIMARY KEY AUTO_INCREMENT,
+    nome_autor VARCHAR(100) NOT NULL,
+    nacionalidade VARCHAR(50),
+    data_nascimento DATE
+);
+
+-- ============================
+-- TABELA DE LIVROS
+-- ============================
+CREATE TABLE livros (
+    id_livro INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(150) NOT NULL,
+    id_autor INT,
+    id_categoria INT,
+    id_editora INT,
+    preco DECIMAL(10,2) NOT NULL CHECK (preco >= 0),
+    estoque INT NOT NULL DEFAULT 0 CHECK (estoque >= 0),
+    data_publicacao DATE,
+    FOREIGN KEY (id_autor) REFERENCES autores(id_autor) ON DELETE SET NULL,
+    FOREIGN KEY (id_categoria) REFERENCES categorias(id_categoria) ON DELETE SET NULL,
+    FOREIGN KEY (id_editora) REFERENCES editoras(id_editora) ON DELETE SET NULL
+);
+
+-- ============================
+-- TABELA DE CLIENTES
+-- ============================
+CREATE TABLE clientes (
+    id_cliente INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    telefone VARCHAR(20),
+    endereco VARCHAR(200)
+);
+
+-- ============================
+-- INSERINDO DADOS
+-- ============================
+
+-- Categorias
+INSERT INTO categorias (nome_categoria) VALUES
+('Fantasia'),
+('Romance'),
+('Tecnologia'),
+('Ficção Científica'),
+('História');
+
+-- Editoras
+INSERT INTO editoras (nome_editora, telefone, endereco) VALUES
+('Editora Martins Fontes', '1133334444', 'Rua das Letras, 100'),
+('Companhia das Letras', '1144445555', 'Av. dos Livros, 200'),
+('Alta Books', '1155556666', 'Rua do Saber, 300'),
+('Intrínseca', '1166667777', 'Rua das Palavras, 400'),
+('HarperCollins', '1177778888', 'Av. Editorial, 500');
+
+-- Autores
+INSERT INTO autores (nome_autor, nacionalidade, data_nascimento) VALUES
+('J.R.R. Tolkien', 'Britânica', '1892-01-03'),
+('Machado de Assis', 'Brasileira', '1839-06-21'),
+('Robert C. Martin', 'Americana', '1952-12-05'),
+('George Orwell', 'Britânica', '1903-06-25'),
+('Yuval Noah Harari', 'Israelense', '1976-02-24');
+
+-- Livros (com mais títulos cadastrados)
+INSERT INTO livros (titulo, id_autor, id_categoria, id_editora, preco, estoque, data_publicacao) VALUES
+('O Senhor dos Anéis', 1, 1, 1, 89.90, 10, '1954-07-29'),
+('Dom Casmurro', 2, 2, 2, 29.90, 5, '1899-01-01'),
+('Clean Code', 3, 3, 3, 120.00, 3, '2008-08-01'),
+('1984', 4, 4, 4, 45.00, 8, '1949-06-08'),
+('A Revolução dos Bichos', 4, 4, 4, 39.90, 6, '1945-08-17'),
+('Sapiens: Uma Breve História da Humanidade', 5, 5, 5, 79.90, 7, '2011-01-01'),
+('Homo Deus: Uma Breve História do Amanhã', 5, 5, 5, 84.90, 4, '2015-01-01');
+
+-- Clientes
+INSERT INTO clientes (nome, email, telefone, endereco) VALUES
+('Ana Silva', 'ana@email.com', '11999999999', 'Rua A, 123'),
+('Carlos Souza', 'carlos@email.com', '21988888888', 'Av. B, 456'),
+('Mariana Lima', 'mariana@email.com', '31977777777', 'Rua C, 789');
