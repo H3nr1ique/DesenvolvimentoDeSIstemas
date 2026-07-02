@@ -1,12 +1,14 @@
 programa {
+    inclua biblioteca Matematica --> mat
+    
     funcao inicio() {
         cadeia nome
         real salarioAtual, salarioReajustado
-        caracter continuar = 'S'
         
-        escreva("=== REAJUSTE SALARIAL - AYRton SENNA FUTEBOL CLUBE ===\n\n")
-        
-        enquanto (continuar == 'S' ou continuar == 's') {
+        escreva("======================================================\n")
+        escreva("=== REAJUSTE SALARIAL - AYRton SENNA FUTEBOL CLUBE ===\n")
+        escreva("======================================================\n\n")
+
             escreva("Digite o nome do jogador: ")
             leia(nome)
             
@@ -22,18 +24,18 @@ programa {
                 salarioReajustado = salarioAtual // 0% de aumento
             }
             
+            // Arredondando 2 casas decimais
+            salarioAtual = mat.arredondar(salarioAtual, 2)
+            salarioReajustado = mat.arredondar(salarioReajustado, 2)
+            
             // Exibição dos resultados
+            escreva("\n-----------------")
             escreva("\n--- RESULTADO ---\n")
+            escreva("-----------------\n\n")
             escreva("Jogador: ", nome, "\n")
             escreva("Salário Atual: R$ ", salarioAtual, "\n")
             escreva("Salário Reajustado: R$ ", salarioReajustado, "\n")
-            escreva("Aumento: R$ ", (salarioReajustado - salarioAtual), "\n\n")
-            
-            escreva("Deseja calcular para outro jogador? (S/N): ")
-            leia(continuar)
-            limpa() // Limpa a tela para próxima entrada
+            escreva("Aumento: R$ ", mat.arredondar(salarioReajustado - salarioAtual, 2), "\n\n")
         }
-        
-        escreva("Programa encerrado. Obrigado!\n")
     }
 }
