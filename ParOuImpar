@@ -1,0 +1,19 @@
+programa {
+  funcao inicio() {
+
+    inteiro numero
+    
+    escreva("=====================================\n")
+    escreva("Programa Para Saber Se o Número é Par\n")
+    escreva("=====================================\n\n")
+
+    escreva("Digite um número: ")
+    leia(numero)
+
+    se (numero % 2 == 0){
+        escreva(numero, " É Um Número Par\n")
+    } senao {
+        escreva(numero, " É Um Numero Impar\n")
+    }
+  }
+}
