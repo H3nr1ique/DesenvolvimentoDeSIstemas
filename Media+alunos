@@ -1,0 +1,30 @@
+programa {
+    funcao inicio() {
+        inteiro quantidade, aprovados = 0, i
+        real nota1, nota2, media
+
+        escreva("Quantos alunos serão cadastrados?: ")
+        leia(quantidade)
+
+        para(i = 1; i <= quantidade; i++){
+            escreva("\n--- Aluno ", i, " ---\n")
+            escreva("Digite a primeira nota: ")
+            leia(nota1)
+            escreva("Digite a segunda nota: ")
+            leia(nota2)
+
+            media = (nota1 + nota2) / 2
+
+            escreva("Média: ", media, "\n")
+
+            se (media >= 6.0) {
+                escreva("Situação: Aprovado\n")
+                aprovados = aprovados + 1
+            } senao {
+                escreva("Situação: Reprovado\n")
+            }
+        }
+
+        escreva("\nTotal de alunos aprovados: ", aprovados)
+    }
+}
