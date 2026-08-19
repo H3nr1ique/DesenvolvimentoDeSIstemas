@@ -25,6 +25,7 @@ programa {
             }
         }
 
+        escreva("\nTotal de alunos cadastrados: ", quantidade)
         escreva("\nTotal de alunos aprovados: ", aprovados)
     }
 }
